@@ -26,6 +26,17 @@ fetch('/profile')
         const birth = parseInt(data.age.split('-')[0])
 
         $avatar.src = `/uploads/avatar/${data.user}.jpg`
+        $avatar.alt = `${data.user}`
+        console.log($avatar)
+
+        $avatar.onerror = () => {
+            $avatar.src = `/uploads/avatar/${data.user}.png`
+
+            $avatar.onerror = () => {
+                $avatar.src = `/uploads/avatar/${data.user}.webp`
+            }
+        }
+
         $user.innerText = data.user
         $name.innerText = data.name
         $age.innerText = data.age

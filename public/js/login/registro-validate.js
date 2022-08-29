@@ -150,24 +150,24 @@ const iti = window.intlTelInput(tel, {
     utilsScript: "./utils.js",
     initialCountry: 'ar',
     separateDialCode: true,
-    preferredCountries: [ 'ar', 'bo', 'br', 'cl', 'co', 'ec', 'py', 'pe', 'mx', 'ur', 've', 'es' ]
+    preferredCountries: ['ar', 'bo', 'br', 'cl', 'co', 'ec', 'py', 'pe', 'mx', 'ur', 've', 'es']
 });
 
 tel.addEventListener('input', (e) => {
 
-    validTel[ 0 ] = iti.isValidNumber()
+    validTel[0] = iti.isValidNumber()
     const targetTel = e.target.value
 
     if ((targetTel.trim() &&
-        targetTel[ 0 ]) ||
+        targetTel[0]) ||
         !regName.test(targetTel)) {
         if (iti.isValidNumber()) {
             errValid(tel, 6, errTel, false)
-            validTel[ 1 ] = iti.getNumber()
+            validTel[1] = iti.getNumber()
             return
         }
         errValid(tel, 6, errTel)
-        errTel.innerText = errorMap[ iti.getValidationError() ] || 'Ingrese un número de teléfono'
+        errTel.innerText = errorMap[iti.getValidationError()] || 'Ingrese un número de teléfono'
     }
 })
 
@@ -176,11 +176,11 @@ tel.addEventListener('input', (e) => {
 
 img.addEventListener('input', (e) => {
 
-    const imgSize = img.files[ 0 ].size
-    const imgExt = img.files[ 0 ].name.split('.').at(-1)
+    const imgSize = img.files[0].size
+    const imgExt = img.files[0].name.split('.').at(-1)
 
     if (imgSize > 1024000) {
-        okForm[ 7 ] = false
+        okForm[7] = false
         imglabel.classList.remove('bg-black/60', 'bg-green-500')
         imglabel.classList.add('bg-red-500')
         imgtext.innerText = 'la imagen supera 1MB!'
@@ -190,15 +190,15 @@ img.addEventListener('input', (e) => {
     if (imgExt !== 'jpg' &&
         imgExt !== 'png' &&
         imgExt !== 'webp') {
-        okForm[ 7 ] = false
+        okForm[7] = false
         imglabel.classList.remove('bg-black/60', 'bg-green-500')
         imglabel.classList.add('bg-red-500')
         imgtext.innerText = 'solo jpg, png o webp!'
         return
     }
 
-    okForm[ 7 ] = true
-    const image = URL.createObjectURL(img.files[ 0 ])
+    okForm[7] = true
+    const image = URL.createObjectURL(img.files[0])
     avatar.setAttribute('src', image)
     avatar.className = 'w-full h-96 object-cover p-[2em_0em_0]'
     avatarText.classList.remove('hidden')
@@ -215,7 +215,7 @@ form.addEventListener('keyup', () => {
     let incorrectForm = false
 
     for (let i = 0; i < okForm.length - 1; i++) {
-        if (!Boolean(okForm[ i ])) {
+        if (!Boolean(okForm[i])) {
             incorrectForm = true
             break
         }
