@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Peliculines: Login</title>
+</head>
+
+<body class="relative flex bg-white min-h-screen">
+    <main class="relative py-40 self-center login montserrat">
+        <form id="submit" action="/login" method="POST" class="relative flex justify-center">
+            <div class="w-full justify-center text-center">
+                <p class="text-8xl text-white shadow-filter">Login</p>
+                <p class="text-2xl text-white shadow-filter2 my-4">Por favor ingrese su usuario</p>
+            </div>
+            <div class="w-full self-center">
+                <div class="flex flex-col w-full md:w-2/3">
+                    <div id="userInexistent"
+                        class="opacity-0 font-sans px-2 my-1 py-1 bg-purple-800 text-sm text-white rounded list-disc transition duration-300">
+                        <li>Usuario y/o contraseña inválidos</li>
+                    </div>
+                    <div id="userWarning"
+                        class="opacity-0 font-sans px-2 py-1 bg-violet-800 text-sm text-white rounded list-disc transition duration-300">
+                        <li>El correo debe ser uno existente</li>
+                    </div>
+                    <input id="user" data-reg="" type="text"
+                        class="my-1 py-1 px-2 rounded font-sans italic focus:outline-none focus:border-0 focus:border-red-500 focus:border-2"
+                        placeholder="Ingrese su correo electrónico">
+
+                    <input id="pass" type="password"
+                        class="my-1 py-1 px-2 rounded font-sans italic focus:outline-none focus:border-0 focus:border-red-500 focus:border-2"
+                        placeholder="Ingrese su contraseña">
+                    <button
+                        class="beige hover:bg-green-500 hover:text-white w-fit my-2 px-4 py-1 self-center text-black rounded drop-shadow-lg transition duration-300">Ingresar</button>
+                    <div id="passBox"
+                        class="opacity-0 mb-2 font-sans px-2 py-1 bg-red-800 text-sm text-white rounded list-disc transition duration-300">
+                        <li id="warningMayus" class="transition duration-300">La contraseña debe contener al menos una
+                            Mayúscula</li>
+                        <li id="warningNumber" class="transition duration-300">La contraseña debe contener al menos un
+                            número</li>
+                        <li id="warningSymbol" class="transition duration-300">La contraseña debe contener al menos un
+                            símbolo
+                            (Posibles: . - _ + *
+                            ! @ # $ % &)</li>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="w-full text-center text-white marron2alfa">
+            No tienes un usuario? <a href="./registro.html"
+                class="text-black hover:text-[#e5e5e5] transition duration-300">Registrate!</a>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/sha256.js">
+    </script>
+    <script src="./js/login/regex.js"></script>
+    <script src="./js/login/error.js"></script>
+    <script src="./js/login/login.js"></script>
+</body>
+
+</html>

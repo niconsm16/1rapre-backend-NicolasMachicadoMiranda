@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gantari:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main div::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+}
+
+main div::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 187, 0.259);
+}
+
+main div::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.095);
+}
+
+#lista a {
+    color: gray;
+}
+
+#lista a:hover {
+    color: black;
+}
+
+.item:hover h2 {
+    color: black;
+}
+
+.item:hover p {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(191, 255, 0);
+}
+
+.productos {
+    background: linear-gradient(0deg, rgba(3, 74, 48, 1) 0%, rgba(0, 0, 0, 1) 37%, rgba(0, 0, 0, 1) 100%);
+}
+
+.carrito {
+    background: url('./img/registro-back.webp'), rgba(0, 0, 0, 0.358);
+    background-blend-mode: hue;
+    background-size: cover;
+}
+
+.productos h1,
+.productos h4 {
+    filter: drop-shadow(1px 1px 2px black);
+    -webkit-filter: drop-shadow(1px 1px 5px black);
+}
+
+.sombras {
+    filter: drop-shadow(1px 1px 2px black);
+    -webkit-filter: drop-shadow(1px 1px 5px black);
+}
+
+.productos h4 {
+    color: white;
+    text-align: end;
+    font-family: 1.4em;
+}
+
+.roboto-c {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.word {
+    width: max-content;
+    color: #8A8A8A;
+    padding: 0 3px;
+    cursor: pointer;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+}
+
+.word:hover {
+    color: white
+}
+
+ul li {
+    margin: 0 .4em
+}
+
+.beige {
+    background: #e5e5e5;
+    fill: #e5e5e5;
+}
+
+.marron {
+    background: #f5f5f5;
+    fill: #f5f5f5;
+}
+
+.marron2 {
+    background: #8A8A8A;
+    fill: #8A8A8A;
+}
+
+.marron2alfa {
+    background: #8a8a8aa6;
+    fill: #8a8a8aa6;
+}
+
+.verde {
+    color: #22c55e;
+}
+
+.gantari {
+    font-family: 'Gantari', sans-serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.roboto {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.profile {
+    background: url('./img/profile.jpg');
+    background-size: cover;
+}
+
+.login {
+    background: url('./img/login-back.webp'), #f5f5f5c9;
+    background-blend-mode: luminosity;
+    width: 100%;
+}
+
+.registro {
+    background: url('./img/registro-back.webp'),
+        #f5f5f5c9;
+    background-blend-mode: luminosity;
+    width: 100%;
+}
+
+.registro main>div {
+    backdrop-filter: blur(10px);
+}
+
+.registro label {
+    color: white;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
+    -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.registro input {
+    margin: 0.3rem 0;
+    padding: 0.25rem 0.5rem;
+    width: 60%;
+    font-style: italic;
+    outline-width: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.registro input:focus {
+    border-width: 2px;
+}
+
+.registro label>input[type=”file”] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.registro label[for="img"] {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    /* background-color: #106BA0; */
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+}
+
+#errorBox>li {
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -ms-transition: .5s all;
+    -o-transition: .5s all;
+}
+
+.shadow-filter {
+    filter: drop-shadow(2px 4px 6px black);
+    -webkit-filter: drop-shadow(2px 4px 6px black);
+}
+
+.shadow-filter2 {
+    filter: drop-shadow(2px 4px 6px black);
+    -webkit-filter: drop-shadow(2px 4px 3px black);
+}
+
+.iti__flag {
+    background-image: url("path/to/flags.png");
+}
+
+.units {
+    animation: units 1.5s ease .1s both;
+    -webkit-animation: units 1.5s ease .1s both;
+}
+
+@keyframes units {
+
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+        -webkit-transform: scale(1.4);
+        -moz-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+        -o-transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url("path/to/flags@2x.png");
+    }
+}

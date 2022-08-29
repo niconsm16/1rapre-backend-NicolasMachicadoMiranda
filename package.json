@@ -1,0 +1,49 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "files": "node server.js --prod files --cart files",
+    "mysql": "node server.js --prod mysql --cart mongodb",
+    "memory": "node server.js --prod memory --cart memory",
+    "sqlite": "node server.js --prod sqlite --cart mongodb",
+    "mongodb": "node server.js --prod mongodb --cart mongodb",
+    "firebase": "node server.js --prod firebase --cart firebase",
+    "start": "node server.js --prod mongodb --cart firebase"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "db/*.json",
+      "db/*.db",
+      "public"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.3",
+    "firebase-admin": "^10.2.0",
+    "intl-tel-input": "^17.0.16",
+    "knex": "^2.0.0",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.7.7",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "sqlite3": "^5.0.8",
+    "twilio": "^3.78.0",
+    "uuid": "^8.3.2",
+    "winston": "^3.8.1",
+    "yargs": "^17.5.1"
+  }
+}

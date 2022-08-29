@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="flex flex-col justify-center items-center font-mono">
+
+    <h1 class="text-4xl m-8">Entrarás como:</h1>
+
+    <form method="post" action="/login" class="flex flex-col gap-5">
+        <div class="flex justify-center gap-5">
+            <button id="user" type="submit" name="user" value="isUser"
+                class="pt-2 pb-4 px-8 bg-zinc-400 hover:bg-zinc-300 transition duration-300 text-4xl rounded-lg shadow-md hover:shadow-xl">User</button>
+            <button id="admin" type="submit" name="user" value="isAdmin"
+                class="pt-2 pb-4 px-8 bg-black hover:bg-zinc-400 transition duration-300 text-white text-4xl rounded-lg shadow-md hover:shadow-xl">Admin</button>
+        </div>
+        <div class="mt-6 flex flex-col justify-center gap-5">
+            <legend class="px-4 rounded">Selecciona el modo de persistencia por favor:</legend>
+            <select id="persist" name="persist" class="text-center border-neutral-200 border-0 bg-neutral-50 shadow-md">
+                <option value="files">Sistema de archivos</option>
+                <option value="sqlite">SQLite3</option>
+                <option value="mariadb">Maria DB</option>
+                <option value="mongodb">Mongo DB</option>
+                <option value="firebase">Firebase</option>
+            </select>
+        </div>
+    </form>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

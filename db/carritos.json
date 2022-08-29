@@ -1,0 +1,40 @@
+[
+  {
+    "id": "134f241e-394a-4a46-a96e-e57622ca27eb",
+    "user": "nikito@tesla.com",
+    "timestamp": "24/8/2022 17:18:40",
+    "selled": false,
+    "productos": [
+      {
+        "id": "97a69fe7-710b-48f5-8912-4054d70d066a",
+        "timestamp": "1988-10-27T03:00:00.000Z",
+        "nombre": "Beetlejuice",
+        "descripcion": "A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house.",
+        "codigo": 272409970,
+        "foto": "https://i.pinimg.com/originals/b0/6b/cd/b06bcd5ad2b2b912410ee5ba7714389b.jpg",
+        "precio": 400,
+        "stock": 81,
+        "cantidad": 1
+      }
+    ]
+  },
+  {
+    "id": "f684589a-9ff5-4618-801c-9c6470bdfe16",
+    "timestamp": "2022-07-09 07:30:52:325000 (July Saturday 9th)",
+    "user": "nikito@tesla.com",
+    "selled": true,
+    "productos": [
+      {
+        "id": "350c63bf-6cb8-485f-8647-12bf1cc59383",
+        "nombre": "Alicia salió por el parabrisas",
+        "timestamp": "2022-05-10 18:18:28:689000 (May Tuesday 10th)",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam perfer...",
+        "codigo": 456456,
+        "foto": "https://i.ytimg.com/vi/RU4cNiDB64s/mqdefault.jpg",
+        "precio": 50,
+        "stock": 54,
+        "cantidad": 2
+      }
+    ]
+  }
+]

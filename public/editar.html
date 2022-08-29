@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Peliculines: Editar Producto</title>
+</head>
+
+<body class="bg-neutral-100 hidden">
+
+    <!-- HEADER=================================================================================================== -->
+
+    <header class="flex items-center absolute top-0 w-full bg-black h-20 z-10">
+        <div class="flex w-1/2">
+            <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/tdxypxgp.json" trigger="loop"
+                colors="primary:#ffffff,secondary:#08a88a" style="width:85px;height:85px">
+            </lord-icon>
+            <span class="flex ml-2 items-center text-3xl montserrat text-white">SUPER CUEBAMNA</span>
+        </div>
+        <div class="flex w-1/2 justify-end">
+            <ul class="flex pr-3 gantari font-bold text-white items-center text-right">
+                <li class="hidden flex px-2 word rotate-90" id="hand">
+                    <div class="text-5xl animate-bounce">👆</div>
+                </li>
+                <a href="./productos.html" class="word" id="movies">PELíCULAS</a>
+                <a href="./carrito.html" class="word mx-3">MI CARRITO</a>
+                <a href="./profile.html" class="word mr-3">MI PERFIL</a>
+                <a href="./logout" id="logout"
+                    class="bg-[#8a8a8aa6] px-4 ml-2 py-2 hover:bg-[#e5e5e5] hover:text-black cursor-pointer rounded transition duration-300">
+                    Desloguearse
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN=================================================================================================== -->
+
+    <main id="main">
+        <div class="flex flex-col w-full items-center text-center mt-12">
+            <h1 id="titulo" class="text-gray-900 text-3xl title-font font-medium mt-12">Agregar Producto</h1>
+            <p id="detalles" class="leading-relaxed my-2 font-bold text-xl"></p>
+        </div>
+
+
+        <div class="max-w-2xl mx-auto mt-12">
+
+            <form id="edit">
+                <div class="relative z-0 mb-6 w-full group">
+                    <input type="text" name="nombre" id="nombre"
+                        class="block text-black py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="nombre"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre
+                        del producto</label>
+                </div>
+                <div class="relative z-0 mb-6 w-full group">
+                    <input type="text" name="descripcion" id="descripcion"
+                        class="block text-black py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="descripcion"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Descripción</label>
+                </div>
+                <div class="relative z-0 mb-6 w-full group">
+                    <input type="number" name="codigo" id="codigo"
+                        class="block text-black py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="codigo"
+                        class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Código</label>
+                </div>
+                <div class="grid xl:grid-cols-2 xl:gap-6">
+                    <div class="relative z-0 mb-6 w-full group">
+                        <input type="number" name="precio" id="precio"
+                            class="block text-black py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="precio"
+                            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Precio</label>
+                    </div>
+                    <div class="relative z-0 mb-6 w-full group">
+                        <input type="number" name="stock" id="stock"
+                            class="block text-black py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="stock"
+                            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Stock</label>
+                    </div>
+                </div>
+                <div class="grid xl:grid-cols-1 xl:gap-6">
+                    <div class="relative z-0 mb-6 w-full group">
+                        <input type="url" name="foto" id="foto"
+                            class="block text-black py-2.5 px-0 w-full text-sm bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" " required />
+                        <label for="foto"
+                            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Url
+                            de foto</label>
+                    </div>
+                </div>
+                <div class="flex justify-center ">
+                    <button type="submit" id="accion"
+                        class="text-white bg-green-500 hover:bg-green-700 transition duration-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Agregar</button>
+                </div>
+            </form>
+
+        </div>
+
+    </main>
+    <script src="./js/edit-functions.js"></script>
+    <script src="./js/global-functions.js"></script>
+    <script src="./js/edit.js"></script>
+    <script src="./js/edit-actions.js"></script>
+</body>
+
+</html>

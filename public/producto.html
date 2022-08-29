@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Peliculines: Item</title>
+</head>
+
+<body class="bg-neutral-100 xl:h-screen hidden">
+
+    <!-- HEADER=================================================================================================== -->
+
+    <header class="flex items-center absolute top-0 w-full bg-black h-20 z-10">
+        <div class="flex w-1/2">
+            <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/tdxypxgp.json" trigger="loop"
+                colors="primary:#ffffff,secondary:#08a88a" style="width:85px;height:85px">
+            </lord-icon>
+            <span class="flex ml-2 items-center text-3xl montserrat text-white">SUPER CUEBAMNA</span>
+        </div>
+        <div class="flex w-1/2 justify-end">
+            <ul class="flex pr-3 gantari font-bold text-white items-center text-right">
+                <li class="hidden flex px-2 word rotate-90" id="hand">
+                    <div class="text-5xl animate-bounce">👆</div>
+                </li>
+                <a href="./productos.html" class="word" id="movies">PELíCULAS</a>
+                <a href="./carrito.html" class="word mx-3">MI CARRITO</a>
+                <a href="./profile.html" class="word mr-3">MI PERFIL</a>
+                <a href="./logout" id="logout"
+                    class="bg-[#8a8a8aa6] px-4 ml-2 py-2 hover:bg-[#e5e5e5] hover:text-black cursor-pointer rounded transition duration-300">
+                    Desloguearse
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <!-- MAIN=================================================================================================== -->
+
+    <main>
+
+        <section id="producto" class="h-full text-gray-300 body-font overflow-hidden sombras">
+            <div class="container px-5 pt-24 mx-auto">
+                <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                    <img id="foto" alt="ecommerce"
+                        class="lg:w-1/2 w-full lg:h-full xl:h-[80vh] h-64 lg:object-contain object-cover object-center rounded"
+                        src="https://dummyimage.com/400x400"
+                        onerror="this.src='https://www.prokerala.com/movies/assets/img/no-poster-available.webp'">
+                    <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                        <h2 id="codigo" class="text-sm title-font text-gray-300 tracking-widest">codigo</h2>
+                        <h1 id="nombre" class="text-gray-100 text-3xl title-font font-medium mb-1">nombre</h1>
+                        <div class="flex mb-4">
+
+                        </div>
+                        <p id="descripcion" class="leading-relaxed">descripcion</p>
+                        <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                            <div class="flex w-full items-center">
+                                <span class="mr-3 font-bold">Stock:</span>
+                                <span id="stock" class="w-1/3"></span>
+                                <div id="qty" class="grid w-full justify-items-end mx-4">
+                                    <p class="leading-relaxed text-sm">Unidades a llevar:</p>
+                                    <div class="flex items-center">
+                                        <button id="remove" disabled
+                                            class=" bg-neutral-400 hover:bg-green-500 rounded-sm font-bold font-mono text-white px-2 py-0">-</button>
+                                        <span id="count" class="px-6">0</span>
+                                        <button id="add" disabled
+                                            class=" bg-neutral-400 hover:bg-green-500 rounded-sm font-bold font-mono text-white px-2 py-0">+</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <span id="precio" class="title-font font-medium text-2xl">precio</span>
+                            <button id="buy" disabled="true"
+                                class="flex ml-auto text-white bg-green-700 border-0 py-2 px-6 focus:outline-none hover:bg-green-500 rounded transition">Agregar
+                                al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/product-actions.js"></script>
+    <script src="./js/global-functions.js"></script>
+    <script src="./js/product-functions.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+
+</html>

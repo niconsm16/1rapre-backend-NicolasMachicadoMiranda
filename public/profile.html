@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title>Peliculines: Mi Perfil</title>
+</head>
+
+<body class="w-full hidden">
+
+    <header class="flex items-center absolute top-0 w-full bg-black h-20 z-10">
+        <div class="flex w-1/2">
+            <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/tdxypxgp.json" trigger="loop"
+                colors="primary:#ffffff,secondary:#08a88a" style="width:85px;height:85px">
+            </lord-icon>
+            <span class="flex ml-2 items-center text-3xl montserrat text-white">SUPER CUEBAMNA</span>
+        </div>
+        <div class="flex w-1/2 justify-end">
+            <ul class="flex pr-3 gantari font-bold text-white items-center text-right">
+                <li class="hidden flex px-2 word rotate-90" id="hand">
+                    <div class="text-5xl animate-bounce">👆</div>
+                </li>
+                <a href="./productos.html" class="word" id="movies">PELíCULAS</a>
+                <a href="./carrito.html" class="word mx-3">MI CARRITO</a>
+                <a href="./profile.html" class="word mr-3">MI PERFIL</a>
+                <a href="./logout" id="logout"
+                    class="bg-[#8a8a8aa6] px-4 ml-2 py-2 hover:bg-[#e5e5e5] hover:text-black cursor-pointer rounded transition duration-300">
+                    Desloguearse
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <main class="w-full h-screen pt-28 bg-black text-white text-center text-xl roboto">
+
+        <div class=" h-full w-full px-4 justify-center">
+
+            <div class="flex-col w-full pl-4 text-start">
+                <div class="flex bg-gray-900 p-4 rounded">
+                    <div class="w-3/4 ">
+                        <div
+                            class="px-2 py-1 mb-2 text-2xl bg-gradient-to-r from-purple-500 via-violet-700 to-gray-900 rounded font-bold drop-shadow-lg">
+                            <p class="sombras">MI PERFIL</p>
+                        </div>
+                        <div class="py-1">
+                            <span>Tu usuario (tu correo electrónico):</span>
+                            <span class="text-3xl font-bold mb-4" id="user">user</span>
+                        </div>
+                        <div class="py-1">
+                            <span>Tu nombre completo:</span>
+                            <span class="text-3xl font-bold mb-4" id="name">nombre</span>
+                        </div>
+                        <div class="py-1">
+                            <span>Fecha de nacimiento:</span>
+                            <span id="age">edad</span>
+                            <span class="text-3xl font-bold" id="actualage">edad</span>
+                            <span class="mb-4">
+                            </span>
+                        </div>
+                        <div class="py-1">
+                            <span>Tu número de teléfono:</span>
+                            <span class="text-3xl font-bold mb-4" id="tel">número de tel</span>
+                        </div>
+                    </div>
+                    <div class=" w-1/4 h-auto border-4 border-white drop-shadow-lg rounded-lg">
+                        <img id="avatar" src="" class=" h-full object-cover bg-center rounded" alt="">
+                    </div>
+                </div>
+
+
+                <div class=" bg-gray-800 my-4 p-4 rounded">
+                    <div class="text-2xl px-2 py-1 bg-gradient-to-r from-orange-500 via-yellow-300 to-gray-800
+                    rounded font-bold">
+                        <p class="sombras">OPCIONES</p>
+                    </div>
+                    <div class="py-1 mt-2 flex">
+                        <span>Quiero ser:</span>
+                        <span class="flex">
+                            <button id="userButton" type="submit" name="user" value="isUser"
+                                class="py-1 px-8 bg-zinc-400 hover:bg-zinc-100 hover:text-black transition duration-300 rounded-lg shadow-md hover:shadow-xl mx-4">User</button>
+                            <button id="adminButton" type="submit" name="user" value="isAdmin" class="py-1 px-8 bg-zinc-400 hover:bg-zinc-100 hover:text-black transition duration-300
+                            rounded-lg shadow-md hover:shadow-xl">Admin</button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class=" bg-gray-900 my-4 p-4 rounded">
+                    <div class="text-2xl px-2 py-1 mb-2 bg-gradient-to-r from-lime-400 via-emerald-400 to-gray-900
+                    rounded font-bold">
+                        <p class="sombras">MENSAJES</p>
+                    </div>
+                    <div class="py-1">
+                        <p>Buenas noticias!</p>
+                        <p>No hay ningún anuncio por hoy!</p>
+                        <p class="flex h-fit rounded-lg drop-shadow-[0px_9px_5px_rgba(0,0,0,50%)]">Qué
+                            esperas?
+                            Ya deberías
+                            estar
+                            comprando! ^_^</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/admin.js"></script>
+    <script src="./js/general/profile.js"></script>
+    <script src="./js/general/navbar.js"></script>
+</body>
+
+</html>
