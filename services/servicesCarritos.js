@@ -51,7 +51,6 @@ export class ServicesCarritos {
     async closeCart(user, id_cart, totals) {
         const order = await this.#repository.locateCart(user);
         const outStock = await this.#productos.checkStock(order.productos);
-
         if (!outStock) {
             const buyer = await this.#login.findUser(user, true)
             const closeOrder = await this.#repository.closeOrder(id_cart);
@@ -63,12 +62,12 @@ export class ServicesCarritos {
 
     async buyNotification(id, buyer, order, totals) {
         const okMail = await this.#notifications.mailCarrito(buyer, order, totals)
-        const okAdminSms = await this.#notifications.smsCarrito(buyer.user)
+        // const okAdminSms = await this.#notifications.smsCarrito(buyer.user)
 
         // Twilio ahora pide verificar todos los números, por ende genera error para números no verificados
         // const okBuyerSms = await this.#notifications.smsBuyer(buyer.tel, id)
 
-        if (okMail && okAdminSms)
+        if (okMail)
             return { id }
     }
 }

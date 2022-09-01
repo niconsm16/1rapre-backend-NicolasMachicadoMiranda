@@ -34,11 +34,11 @@ export class ControllerCarritos {
     }
 
     async purchaseCart(req, res) {
-        const buyInfo = await ControllerCarritos.services.closeCart(
+        const info = await ControllerCarritos.services.closeCart(
             req.session.passport.user, req.params.id, req.body)
-        !buyInfo.error
-            ? res.status(200).send(buyInfo)
-            : res.status(403).send(buyInfo)
+        info.error
+            ? res.status(403).send(info)
+            : res.status(200).send(info)
     }
 }
 

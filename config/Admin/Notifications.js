@@ -43,6 +43,7 @@ export class Notifications {
 
     mailCarrito = async (buyer, order, totals) => {
         try {
+
             await this.transporter.sendMail({
                 from: 'Suburbios el Malandrín',
                 to: process.env.MAIL_USER,
@@ -52,7 +53,7 @@ export class Notifications {
                 <p>USUARIO: ${buyer.user}</p>
                 <p>DIRECCION: ${buyer.address}</p>
                 <p>TELEFONO: ${buyer.tel}</p>
-                <p>ID de Orden: ${order.id}</p>
+                <p>ID de Orden: ${order.id || order._id}</p>
                 <p>Fecha: ${order.timestamp}</p>
                 </br>
                 <hr/>
