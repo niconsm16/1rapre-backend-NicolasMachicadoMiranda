@@ -14,9 +14,9 @@ const reduce = (products, $subtotal, $impuesto, $envio, $total) => {
 const showProducts = (products, container) => {
 
     let productos = document.createElement('div')
-    productos.className = 'w-full'
+    productos.className = 'w-full bg-[#00000038]'
     productos.innerHTML = products.map(prod => `
-                <div class="flex pb-4 border-neutral-20 border-b-2 bg-black/10">
+                <div class="flex pb-4 border-neutral-20 border-b-2 py-4 bg-black/10">
                     <div class="md:w-4/12 2xl:w-1/4 w-full">
                         <img src=${prod.foto} alt="Black Leather Bag" class="w-full h-full object-center object-cover" onerror="this.src='https://www.prokerala.com/movies/assets/img/no-poster-available.webp'" />
                     </div>
