@@ -3,7 +3,7 @@ const checkout = document.getElementById('checkout')
 
 // Boton Checkout
 checkout.onclick = (e) => {
-
+    checkout.disabled = true;
     e.preventDefault()
     const idCart = localStorage.getItem('myIdCart');
 
@@ -23,8 +23,13 @@ checkout.onclick = (e) => {
         .then(res => res.json())
         .then((data) => {
             console.log('THENTHEN')
-            if (data.error) errorStock(data.list)
+            if (data.error) {
+                checkout.disabled = false;
+                console.log('ERROR THEN')
+                errorStock(data.list)
+            }
             else {
+                console.log('TODO BIEN THEN')
                 localStorage.removeItem('myIdCart')
                 sessionStorage.setItem('idOrder', data.id)
                 location.href = './exito.html'
@@ -34,6 +39,7 @@ checkout.onclick = (e) => {
 
 //Remover producto
 const remove = (id) => {
+    document.getElementById(`remove-${id}`).disabled = true;
     const idCart = localStorage.getItem('myIdCart');
     fetch(`./api/carrito/${idCart}/productos/${id}`, {
         method: 'DELETE'
@@ -47,6 +53,7 @@ const remove = (id) => {
 
 //Agregar un producto
 const add = (id) => {
+    document.getElementById(`add-${id}`).disabled = true;
     const idCart = localStorage.getItem('myIdCart');
     fetch(`./api/carrito/${idCart}/productos/${id}`, {
         method: 'PUT',

@@ -35,12 +35,12 @@ const showProducts = (products, container) => {
                         </p>
                         <div class="flex items-center justify-between pt-5">
                             <div class="flex itemms-center">
-                                <p id="add" onclick="add('${prod._id || prod.id}')"
+                                <button id="add-${prod._id || prod.id}" onclick="add('${prod._id || prod.id}')"
                                     class="text-xs leading-3 underline text-green-400 cursor-pointer">
-                                    Agregar</p>
-                                <p id="remove" onclick="remove('${prod._id || prod.id}')"
+                                    Agregar</button>
+                                <button id="remove-${prod._id || prod.id}" onclick="remove('${prod._id || prod.id}')"
                                 class="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer">
-                                    Remover</p>
+                                    Remover</button>
                             </div>
                             <p id="precio" class="text-base font-black leading-none">
                                 $${Number(prod.precio) * prod.cantidad}</p>

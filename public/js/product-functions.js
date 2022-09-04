@@ -20,6 +20,7 @@ $remove.onclick = () => {
 
 $buy.onclick = () => {
     if (count > 0) {
+        $buy.disabled = true;
         let idCart = localStorage.getItem('myIdCart') || 0
         sendProduct(idCart)
     } else {
